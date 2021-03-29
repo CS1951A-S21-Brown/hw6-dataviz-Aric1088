@@ -16,13 +16,57 @@
     <div class="row">
         <div class="col-lg-6">
             <div id="graph1"></div>
+
+            
+            <button type="button" class="btn btn-info" onclick="setData('NA_Sales')">NA</button>
+            <button type="button" class="btn btn-info" onclick="setData('EU_Sales')">EU</button>
+            <button type="button" class="btn btn-info" onclick="setData('JP_Sales')">JP</button>
+            <button type="button" class="btn btn-info" onclick="setData('Other_Sales')">Other</button>
             <div id="graph2"></div><br/>
-        </div>
-        <div class="col-lg-6">
+            <button type="button" class="btn btn-info" onclick="setPieData('Action')">Action</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Adventure')">Adventure</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Fighting')">Fighting</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Misc')">Misc</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Platform')">Platform</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Puzzle')">Puzzle</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Racing')">Racing</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Role-Playing')">Role-Playing</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Shooter')">Shooter</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Simulation')">Simulation</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Sports')">Sports</button>
+            <button type="button" class="btn btn-info" onclick="setPieData('Strategy')">Strategy</button>
+            <h5>Top Publishers Per Genre($Millions)</h5>
             <div id="graph3"></div>
+            <h2>Written Questions</h2>
+            <ol>
+                <li>
+                    For question 1, we directly return the top 10 video games of all time: we perform an ordering by using global sales to judge which video games are in the top ten. For question 2, we generate a dynamic barplot which displays the top genres per region, based on sales. We can also adjust the region we are examining in question, which answers the question of which genre is most popular, stratified by region. For the last question, we illustrate a pie chart, demonstrating the top 5 publishers(based on global sales) for a particular genre. We can pick which genre we want to examine closer, which yields our answer to question 3.
+                </li>
+                <li>
+                    1. D3 made it extremely simple to dynamically update data.
+                    2. D3 built in types(barplots, scatterplots, pie charts) make it simply to find a predefined type and use that to properly display the data in question.
+                    3. The dynamic component allows quick context switches between different subsets of data, making it easy to compare and contrast different modes of selection.
+                </li>
+                <li>
+                    1. D3 built in chart types may create a mispresentative view of data.
+                    2. D3 may provide an oversimplication of data, as it may not provide all insights in the data and why in it's display.
+                    3. D3 allows predefined "views" into the data, and there may be cases where the library has limitations in the type of visualizations that we may want to demonstrate, especially ones that may have many labels.
+                </li>
+                <li>
+                    I tried to use neutral colors for my piechart to make it easier for people to see the differences between the sections, while also adding a quantization factor to my barplots so it is easier to see the differences in length. I also added a tooltip for my second barplot so that it will be easier to correlate the sales presented with the genre it is linked with. Some users who may have difficulty seeing small font may have issues with the dashboard, as I did try to squeeze in a lot of information on certain components of my visualizations.
+                </li>
+                <li>
+                    I think one thing I could have done a better job was planning what information I wanted to have on my visualizations and whether that amount would be to "cramped" to show to all individuals, as there are some components of my visualizations that could use some more space to make it easier to see. It was difficult to preplan ahead exactly what the visualizations would like and how the spacing would like, making it difficult to figure out what information to include and exclude, coming down to a series of difficult tradeoffs to consider.
+                </li>
+            </ol>
         </div>
+
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="graph1.js"></script>
+    <script type="text/javascript" src="graph2.js"></script>
+    <script type="text/javascript" src="graph3.js"></script>
 </body>
+
 </html>
